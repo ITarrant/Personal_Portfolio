@@ -4,8 +4,15 @@
 </head>
 <body>
 <div class="container text-center pt-4">
-    <div class="container container-jumbo">
-        <h1>Welcome to my portfolio</h1>
+    <div class="container">
+        <h1>Iain's Portfolio</h1>
+
+        {% load static %}
+
+        <img src="{% static 'portfolio/IAIN-office.jpg' %}">
+        <a href="{% static 'portfolio/Iain-Resume.pdf' %}">Resume</a>
+        <a href="{% url 'blog:all_blogs' %}">Blogs</a>
+
     </div>
     <div class="container">
         {% for project in projects %}
